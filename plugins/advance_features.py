@@ -385,7 +385,7 @@ async def autoDelete_settings(client, message):
                     [InlineKeyboardButton(mode, callback_data='chng_autodel'), InlineKeyboardButton('• sᴇᴛ ᴛɪᴍᴇʀ •', callback_data='set_timer')],
                     [InlineKeyboardButton('• ʀᴇғʀᴇsʜ', callback_data='autodel_cmd'), InlineKeyboardButton('ᴄʟᴏsᴇ •', callback_data='close')]
                 ]),
-                message_effect_id = 5107584321108051014 #👍
+                
             )
     except Exception as e:
             reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("• ᴄʟᴏsᴇ •", callback_data = "close")]])
@@ -425,7 +425,7 @@ async def files_commands(client: Client, message: Message):
                 [InlineKeyboardButton(f'• ᴄʙ: {cbd}', callback_data='cb'), InlineKeyboardButton(f'• sʙ •', callback_data='setcb')],
                 [InlineKeyboardButton('• ʀᴇғʀᴇsʜ', callback_data='files_cmd'), InlineKeyboardButton('ᴄʟᴏsᴇ •', callback_data='close')]
             ]),
-            message_effect_id = 5107584321108051014 #👍
+            
         )
     except Exception as e:
         reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("•  ᴄʟᴏsᴇ  •", callback_data = "close")]])
@@ -449,7 +449,7 @@ async def handle_reqFsub(client: Client, message: Message):
             [InlineKeyboardButton(f"{on} ᴏɴ", "chng_req"), InlineKeyboardButton(f"{off} ᴏғғ", "chng_req")],
             [InlineKeyboardButton("• ᴍᴏʀᴇ sᴇᴛᴛɪɴɢs •", "more_settings")]
         ]
-        await message.reply(text=RFSUB_CMD_TXT.format(req_mode=texting), reply_markup=InlineKeyboardMarkup(button), message_effect_id=5046509860389126442)
+        await message.reply(text=RFSUB_CMD_TXT.format(req_mode=texting), reply_markup=InlineKeyboardMarkup(button)
         
     except Exception as e:
         reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("•  ᴄʟᴏsᴇ  •", callback_data = "close")]])
